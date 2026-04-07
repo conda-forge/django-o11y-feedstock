@@ -3,7 +3,7 @@ schema_version: 1
 
 context:
   name: django-o11y
-  version: "0.7.0"
+  version: "0.7.1"
   python_min: "3.12"
 
 package:
@@ -12,7 +12,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/django_o11y-${{ version }}.tar.gz
-  sha256: 374c11f7e5cccaaf1bde5524cc278dfd2b0edbc9a05c6ce96d19e3a24c278412
+  sha256: 9052538196ed7ff03924534a80812edb65322f7ff5453ea7c0be9ec5e722da65
 
 build:
   number: 0
@@ -45,8 +45,8 @@ tests:
         - django_o11y
       pip_check: true
       python_version:
-      - ${{ python_min }}.*
-      - "*"
+        - ${{ python_min }}.*
+        - "*"
 
 about:
   summary: Comprehensive OpenTelemetry observability for Django with traces, logs, metrics, and profiling
